@@ -58,14 +58,14 @@ void drawPiece() {
       }
     }
     if (inTouch == true) {
-      fill(255, 0, 0);
+      fill(138, 43, 226); //ballcolor out
       playTime += 2;
     } else {
-      fill(0, 200, 0);
+      fill(75, 0, 130); //ballcolor in
     }
     ellipse(mouseX, mouseY, pieceSize, pieceSize);
-  } else {   
-    fill(0, 200, 0);
+  } else {
+    fill(255, 255, 255);//ballcolor goal
     ellipse((pieceX+0.5)*roadW, (pieceY+0.5)*roadW, pieceSize, pieceSize);
   }
 }
@@ -267,13 +267,13 @@ void drawMaze() {
   for (int x=2; x <= boardX-3; x++) {
     for (int y=2; y <= boardY-3; y++) {
       if (map[x][y] == (0)) {
-        fill(100, 0, 0);
+        fill(255, 228, 225); //backcolor in
       } else if (map[x][y] == (1)) {
-        fill(0, 200, 0);
+        fill(219, 112, 147); //backcolor adge
       } else if (map[x][y] == (2)) {
-        fill(200, 200, 0);
+        fill(221, 160, 221); //backcolor start
       } else if (map[x][y] == (3)) {
-        fill(200, 0, 200);
+        fill(220, 20, 60); //backcolor goal
       }
       rect(roadW*x, roadW*y, roadW, roadW);
     }
